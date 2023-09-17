@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Stats Preview Card Component</title>
+  </head>
+  <body>
+    <!-- main component -->
+    <main class="component">
+      <!-- section 1 image -->
+      <picture>
+        <source
+          media="(min-width: 400px)"
+          srcset="images/image-header-mobile.jpg"
+        />
+        <img src="images/image-header-desktop.jpg" alt="" />
+      </picture>
+
+      <!-- content -->
+      <div class="content">
+        <h1 class="heading">
+          Get <strong>insight</strong> that help your business grow.
+        </h1>
+
+        <p>
+          Discover the benifits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+
+        <!-- stats section -->
+        <div class="row">
+          <div class="box">
+            <span class="stat-num">10k+</span
+            ><span class="stat-title">companies</span>
+          </div>
+          <div class="box">
+            <span class="stat-num">314</span
+            ><span class="stat-title">templates</span>
+          </div>
+          <div class="box">
+            <span class="stat-num">12M+</span
+            ><span class="stat-title">queries</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer of the page -->
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Himanshu-196018">@Himanshu</a>.
+    </footer>
+  </body>
+</html>
