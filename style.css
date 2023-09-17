@@ -4,9 +4,8 @@
   padding: 0;
 }
 
-html,
 body {
-  min-height: 100vh;
+  min-height: 900px;
   font-family: Inter, sans-serif;
   font-size: 15px;
   background-color: hsl(233, 47%, 7%);
@@ -21,8 +20,12 @@ body {
   color: white;
   background-color: hsl(244, 38%, 16%);
   border-radius: 12px;
-  justify-self: center;
-  align-self: center;
+  z-index: 1;
+  /* centering the component */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* adding color filter to image */
@@ -82,8 +85,11 @@ p {
 
 /* style for larger screens */
 @media screen and (width > 800px) {
+  body {
+    min-height: 100vh;
+  }
   .component {
-    margin: 70px 20px;
+    margin: 0 20px;
     width: 1110px;
     height: 445px;
     display: flex;
@@ -128,6 +134,8 @@ footer {
   font-size: 14px;
   margin: 20px 0;
   color: hsl(277, 64%, 61%);
+  align-self: flex-end;
+  z-index: 2;
 }
 footer a {
   text-decoration: none;
