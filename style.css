@@ -6,9 +6,130 @@
 
 html,
 body {
-  width: 100%;
   min-height: 100vh;
   font-family: Inter, sans-serif;
   font-size: 15px;
   background-color: hsl(233, 47%, 7%);
+  text-align: center;
+  display: grid;
+}
+
+/* style for component */
+.component {
+  margin-top: 70px;
+  width: 325px;
+  color: white;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 12px;
+  justify-self: center;
+  align-self: center;
+}
+
+/* adding color filter to image */
+.image::before {
+  width: 325px;
+  height: 240px;
+  content: "";
+  position: absolute;
+  background-color: hsla(277, 60%, 47%, 0.6);
+  border-radius: 12px 12px 0 0;
+}
+
+/* image */
+.image img {
+  width: 325px;
+  height: 240px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* style for component content */
+h1 {
+  margin: 40px 30px 0;
+  font-size: 28px;
+}
+h1 strong {
+  color: hsl(277, 64%, 61%);
+}
+
+p {
+  margin: 20px 30px 0;
+  max-width: 350px;
+  line-height: 1.5;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* style for stats section */
+.row {
+  margin: 35px 30px 30px;
+  display: grid;
+  row-gap: 28px;
+}
+
+.box {
+  display: grid;
+  row-gap: 8px;
+}
+
+.stat-num {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stat-title {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+}
+
+/* style for larger screens */
+@media screen and (width > 800px) {
+  .component {
+    margin: 70px 20px;
+    width: 1110px;
+    height: 445px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  /* filter effect */
+  .image::before {
+    width: 539px;
+    height: 445px;
+    border-radius: 0 12px 12px 0;
+  }
+
+  /* image */
+  .image img {
+    width: 539px;
+    height: 445px;
+    border-radius: 0 12px 12px 0;
+  }
+  .content {
+    margin-left: 50px;
+    width: 550px;
+    height: 445px;
+    text-align: left;
+    display: grid;
+    align-content: space-around;
+  }
+
+  h1 {
+    width: 400px;
+    font-size: 34px;
+  }
+  .row {
+    width: 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* style for footer */
+footer {
+  font-size: 14px;
+  margin: 20px 0;
+  color: hsl(277, 64%, 61%);
+}
+footer a {
+  text-decoration: none;
+  color: white;
 }
